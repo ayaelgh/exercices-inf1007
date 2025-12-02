@@ -1,0 +1,17 @@
+
+class chai:
+
+    def __init__(self, sweetness, milk_level): #we have opned the chai factory
+        self.sweetness = sweetness
+        self.milk_level = milk_level
+
+    def sip(self):
+        print("Sipping chai")
+
+    
+    def add_sugar(self, amount):
+        print("added the sugar")
+
+my_chai = chai(sweetness = 3, milk_level = 2) #object created
+
+my_chai.add_sugar(3) #call only one method (object)

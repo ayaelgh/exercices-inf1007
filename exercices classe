@@ -1,0 +1,24 @@
+#chapitre 2
+
+#● Qu'est-ce que ‘print(chr(0x1F600))’ fait?'
+
+print(chr(0x1F600)) #transforme un code unicode en caractere, « 0b », « 0o », « 0x », où b, o et x correspondent à la base utilisée (binaire, octal, hex).
+
+#● Qu'est-ce que ‘print(‘ ’)’ fait?
+print('FR')
+
+#● Qu'est-ce que ‘print(chr(0x1F1F7))’ fait?
+print(chr(0x1F1F7))
+
+#● Qu'est-ce que ‘print(chr(0x1F1EB) + chr(0x1F1F7))’ fait?
+print(chr(0x1F1EB) + chr(0x1F1F7))
+
+#○ Pourquoi pensez-vous que cela fonctionne?
+
+# Symbol à int
+print(ord(“emoji”)) -> 129297
+#Int à hex
+print(hex(ord(“emoji”))) -> 0x1f911 (voir le tableau Unicode)
+#Hex à symbole
+print(chr(0x1F911)) -> emoji
+
