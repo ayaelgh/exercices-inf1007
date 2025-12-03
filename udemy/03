@@ -1,0 +1,67 @@
+#INTEGER
+
+black_tea_grams = 14
+ginger_grams = 3
+
+total_grams = black_tea_grams + ginger_grams
+print(f"Total grams of base teas is {total_grams}")
+
+remaining_tea = black_tea_grams - ginger_grams
+print(f"Total grams of remaining tea is {remaining_tea}")
+
+milk_litres = 7
+servings = 4 
+milk_per_serving = milk_litres / servings #division normale
+print(f"Milk per serving is {milk_per_serving}")
+
+total_tea_bags = 7
+pots = 4
+bags_per_pot = total_tea_bags // pots #division complete
+print(f"While tea bags per pot: {bags_per_pot}")
+
+total_cadamom_pods = 10
+pods_per_cup = 3 
+leftover_pods = total_cadamom_pods % pods_per_cup  #modulo = leftover of la division
+print(f"Leftover C pods {leftover_pods}")
+
+base_flavor_strenght = 2
+scale_factor = 3 
+powerful_flavour = base_flavor_strenght ** scale_factor # ** = exposant
+print(f"Scaled flavour strenght {powerful_flavour}")
+# 2 * 2 * 2
+
+total_tea_leaves_harvested = 1_000_000_000 #improves readability
+print(f"tea leaves: {total_tea_leaves_harvested}")
+
+#BOOLEAN
+
+is_boiling = True
+stri_count = 5
+total_actions = stri_count + is_boiling #upcasting (True = 1)
+print (f"Total actions: {total_actions}")
+
+milk_preseent = 0 #no milk
+print (f"Is there milk? {bool(milk_preseent)}")
+
+water_hot = True
+tea_added = False
+
+can_serve = water_hot and tea_added
+print (f"Can serve chai? {can_serve}")
+
+#REAL NUMBERS (precision)
+
+import sys 
+from fractions import Fraction 
+from decimal import Decimal
+
+ideal_temp = 95.5
+current_temp = 95.499999
+print(f"ideal temp {ideal_temp}")
+print(f"current temp {current_temp}")
+print(f"Difference temp {ideal_temp - current_temp}") # très précis
+print(sys.float_info) # whats the float informations
+
+
+
+

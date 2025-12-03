@@ -1,0 +1,32 @@
+sugar_amount = 2                            #this is supposed to be immutable but its still changing why?
+print(f"initial sugar: {sugar_amount}")
+
+sugar_amount = 12
+print(f"second initial sugar: {sugar_amount}")
+
+""" there's a memory box, theres a 2 and 12, when we said sugar_amount = 12, it took the value 12, 
+it did not change the 2 into a 12. The reference is changing, not the exact value"""
+
+print(f"ID of 2: {id(2)}")      #ID of 2: 4378831240
+print(f"ID of 12: {id(12)}")    #ID of 2: 4378831560
+
+
+spice_mix = set() #set() is a data type that collects a lot of things
+
+print(f"Initial spice mix id: {id(spice_mix)}")     #supposed to be mutable
+print(f"Initial spice mix id: {spice_mix}")     #supposed to be mutable
+spice_mix.add("Ginger")
+spice_mix.add("cardamom")
+print(f"After spice mix id: {id(spice_mix)}")  
+print(f"After spice mix id: {spice_mix}")  
+
+#Initial spice mix id: 4316878144
+#After spice mix id: 4316878144
+
+"""
+initial spice mix id: 4342388032
+Initial spice mix id: set()
+After spice mix id: {'Ginger', 'cardamom'}
+After spice mix id: 4342388032
+"""
+
