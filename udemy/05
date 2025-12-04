@@ -1,0 +1,203 @@
+#TUPLES
+
+masala_spices = ("cardamom", "cloves", "cinnamon")
+(spice1, spice2, spice3) = masala_spices #extract what is in the tuple
+print(f"mains masala:spices {spice1}, {spice2}, {spice3}")
+
+ginger_ratio, cardamom_ratio = 2, 1
+print(f"ratio is g: {ginger_ratio} and c: {cardamom_ratio}")
+
+ginger_ratio, cardamom_ratio = cardamom_ratio, ginger_ratio
+print(f"ratio is g: {ginger_ratio} and c: {cardamom_ratio}")
+
+#membership
+print(f"Is cinammon in mala spices? {'cinammon' in masala_spices}") 
+
+#LIST
+
+ingredients = ["water", "milk", "black tea"]
+ingredients.append("sugar") #add in the list
+ingredients.remove("water") #remove from the list
+
+spice_options = ["ginger", "cardamom"]
+chai_ingredients = ["water", "milk"]
+
+chai_ingredients.extend(spice_options) # extend the list with another list
+
+chai_ingredients.insert(2, "black tea") #add in a particular position (index, thing)
+
+last_added = chai_ingredients.pop() #remove the last element from the list and use it
+
+chai_ingredients.reverse() #reverse the list
+print(f"chai: {chai_ingredients}") #
+
+chai_ingredients.sort() #ordre alphabetique
+
+sugar_levels = [1, 2, 3, 4, 5]
+print(f"max sugar: {max(sugar_levels)}")
+print(f"max sugar: {min(sugar_levels)}")
+
+#OPERATOR OVERLOADING
+
+base_liquid = ["water", "milk"]
+extra_flavor = ["ginger"]
+
+full_liquid_mix = base_liquid + extra_flavor
+another_one = base_liquid * 3
+
+
+"CINNAMON"
+raw_spice_data = bytearray(b"CINNAMON")
+print(raw_spice_data)
+raw_spice_data = raw_spice_data.replace(b"CINNA", b"CARD")
+print(raw_spice_data)
+
+
+#exo
+my_cart = ["apples", "bananas", "milk"]
+print(my_cart)
+
+my_cart.append("bread")
+print(my_cart)
+
+my_cart.insert(0, "ketchup")
+print(my_cart)
+
+my_cart.remove("bananas")
+print(my_cart)
+
+removed_item = my_cart.pop()
+print(removed_item)
+
+new = ["rice", "butter"]
+my_cart.extend(new)
+print(my_cart)
+
+my_cart.sort()
+print(my_cart)
+
+my_cart.reverse()
+print(my_cart)
+
+new = ["juice", "jam"]
+print(my_cart + new)
+
+print(my_cart*2)
+
+list = "juice allo ca va"
+print(list.split())
+
+#SETS
+
+essential_spices = {"cardamom", "ginger", "cinnamon"}
+optional_spices = {"cloves", "ginger", "black pepper"}
+
+all_spices = essential_spices | optional_spices #ceux qui sont pareils
+print(f"common_spices: {all_spices}")
+
+common_spices = essential_spices & optional_spices
+print(f"common_spices")
+
+only_in_essential = essential_spices - optional_spices
+print(f"only in essential: {only_in_essential}")
+
+print(f"is 'cloves' in essential spices ? {"cloves" in essential_spices}")
+
+new = frozenset(essential_spices)  #cant modify them
+print(new)
+
+#DICTIONNARY
+
+chai_order = dict(type = "Masala chai", size = "large", sugar = 2)
+print(chai_order)
+
+chai_recipe = {}
+chai_recipe["base"] = "black tea" #add a data (key and value)
+chai_recipe["liquid"] = "milk"
+print({chai_recipe['base']})
+
+del chai_recipe["liquid"] #delete smtg from the dic
+print(chai_recipe)
+ 
+#MEMBERSHIP
+
+print("sugar" in chai_order)
+
+chai_order = {'type': 'Masala chai', 'size': 'medium', 'sugar': 1}
+print(f"order details (keys): {chai_order.keys()}")
+print(f"order details (values): {chai_order.values()}")
+print(f"order details (items): {chai_order.items()}")
+
+last_item = chai_order.popitem()
+print(last_item)
+
+extra_spices = {"cardamom": "crushed", "ginger": "slices"}
+chai_recipe.update(extra_spices)  #add
+print(chai_recipe)
+
+chai_size = chai_order["size"] #extracting a value
+print(chai_size)
+
+chat_note = chai_order.get("note", "no note") #doesnt crash (what to get, if not...)
+
+#exo
+
+# Step 1: Create a customer dictionary with name, age, and city
+customer = {
+    "name": "John Doe",
+    "age": 32,
+    "city": "New York"
+}
+
+print(customer)
+
+# Step 2: Add email and phone
+customer["email"] ="john.doe@example.com"
+customer["phone"] = "123-456-7890"
+print(customer)
+
+# Step 3: Print customer's name and city
+
+print(customer["name"])
+print(customer["city"])
+
+# Step 4: Check if "email" exists
+
+print("email" in customer)
+
+# Step 5: Delete the "age" field
+
+del customer["age"]
+print(customer)
+
+# Step 6: Print all keys, values, and items
+
+print(customer.keys())
+print(customer.values())
+print(customer.items())
+
+# Step 7: Remove and print the last inserted item
+last = customer.popitem()
+print(last)
+
+# Step 8: Use .get() to access "membership"
+print(customer.get("membership"))
+
+# Step 9: Update dictionary with "address"
+print(customer.update({"address" : "blablabla"}))
+
+# Step 10: Print final dictionary
+print(customer)
+
+#ADVANCED DATA TYPES
+'''
+import arrow
+
+brewing_time = arrow.utcnow()
+brewing_time.to("Europe/Rome")
+
+from collections import namedtuple
+chaiprofiles = namedtuple("Chai profile", ["flavor", "aroma"])
+print(chaiprofiles)
+
+'''
