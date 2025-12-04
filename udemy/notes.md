@@ -177,4 +177,13 @@ Advanced data types:
     
 SECTION 3
 
+* exercices 06.py (mini projects)
+
+Conditionnals:
+ - if
+ - elif 
+ - else
+ - case match _
+
+
 
